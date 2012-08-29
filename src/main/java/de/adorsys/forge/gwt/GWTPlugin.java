@@ -198,6 +198,11 @@ public class GWTPlugin implements Plugin {
 		executeCommand(out, command, args, a);
 	}
 	
+	/**
+	 * @param out
+	 * @param a
+	 * Debug the GWT application
+	 */
 	@Command("debug")
 	public void debug(final PipeOut out, String... a){
 		String command = "gwt:debug";
