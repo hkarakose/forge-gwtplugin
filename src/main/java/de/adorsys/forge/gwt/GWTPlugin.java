@@ -130,7 +130,7 @@ public class GWTPlugin implements Plugin {
 				"    6. Publish your app and generate a opensocial gadget with 'setup-gadget'\n");
 	}
 	
-	@Command(value = "setup-beanvalidation", help = "add beanvalidation to the gwt project")
+	@Command(value = "setup-beanvalidation", help = "add bean validation to the gwt project")
 	public void addBeanValidation() {
 		GWTFacet facet = project.getFacet(GWTFacet.class);
 		facet.setupBeanValidation();
@@ -282,7 +282,7 @@ public class GWTPlugin implements Plugin {
 
 	@Command(value = "new-mvp", help = "creates a mvp package")
 	public void createMVP(
-			@Option(required = true, type = PromptType.JAVA_VARIABLE_NAME, help="the mvp artifactname that builds the created package")
+			@Option(required = true, type = PromptType.JAVA_VARIABLE_NAME, help="the mvp artifact name that builds the created package")
 			String name,
 			final PipeOut out) throws FileNotFoundException {
 		
@@ -375,6 +375,11 @@ public class GWTPlugin implements Plugin {
 		executeCommand(out, "gwt:run", a);
 	}
 	
+	/**
+	 * @param out
+	 * @param a
+	 * Debug the GWT application
+	 */
 	@Command("debug")
 	public void debug(final PipeOut out, String... a){
 		executeCommand(out, "gwt:debug", a);
